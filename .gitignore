@@ -1,0 +1,211 @@
+# ============================================================================
+# Nexus-AI .gitignore
+# Project: Trilingual 1st Grade French Immersion Workspace
+# Security Level: PRODUCTION
+# ============================================================================
+
+# ====================
+# SECURITY - CRITICAL
+# ====================
+
+# Environment variables (NEVER commit)
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Credentials and API keys
+*.key
+*.pem
+*.cert
+*.p12
+*credentials*.json
+*service-account*.json
+*firebase-config*.json
+
+# Google Apps Script credentials
+.clasp.json
+.claspignore
+
+# SSH keys
+id_rsa
+id_ed25519
+*.pub
+
+# ====================
+# DEPENDENCIES
+# ====================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnp/
+.pnp.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+.venv
+
+# ====================
+# IDE / EDITORS
+# ====================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ====================
+# OPERATING SYSTEM
+# ====================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ====================
+# PROJECT SPECIFIC
+# ====================
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+
+# Logs
+logs/
+*.log
+
+# Database backups (keep structure, not data)
+db/backups/*.csv
+db/backups/*.json
+db/backups/*.xlsx
+
+# Test data
+test_data/
+*.test.json
+
+# Build outputs
+.cache/
+.output/
+.nuxt/
+.next/
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# ====================
+# DOCUMENTATION
+# ====================
+
+# Compiled docs (keep source, not builds)
+docs/_build/
+docs/.doctrees/
+
+# ====================
+# ALLOW ESSENTIAL FILES
+# ====================
+
+# Keep these even if they match patterns above
+!.gitignore
+!.github/
+!docs/
+!scripts/config/.gitkeep
+!db/backups/.gitkeep
+
+# ====================
+# NOTES
+# ====================
+
+# This .gitignore follows:
+# - Google Cloud Security Best Practices (no credentials in code)
+# - Project Sentinel standards (zero-code storage)
+# - FLAIM v4.1 (separation of concerns)
+#
+# CRITICAL REMINDERS:
+# 1. NEVER commit .env files
+# 2. NEVER commit API keys or credentials
+# 3. Use Script Properties for Google Apps Script IDs
+# 4. Keep backups in /db/backups/ but exclude from Git
+# 5. Before each commit, run: git status | grep ".env"
+#
+# Owner: Cary Hebert (chebert4@ebrschools.org)
+# ============================================================================
