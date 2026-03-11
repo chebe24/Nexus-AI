@@ -25,7 +25,7 @@ Automated AI agent management and trilingual RAG system for educational content 
 ## 📁 Project Structure
 
 ```
-Nexus-AI/
+Proj_NexusAI/
 ├── active/           # Active AI agents (shortcuts, scripts)
 ├── db/               # Database and backups
 │   └── backups/      # Inventory snapshots (git-ignored)
